@@ -8,7 +8,7 @@ const errorHandler = (err, req, res, next) => {
     })
   }
   return res.status(500).send({
-    msg: `Internal error. Please try again`
+    msg: `Internal error. Please try again. ${err.message}`
   })
 }
 
